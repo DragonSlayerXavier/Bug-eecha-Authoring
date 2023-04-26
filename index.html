@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
+    <script src="script.js"></script>
     <title>Authoring for Bug-eecha</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
@@ -124,7 +126,7 @@
         <input type="checkbox" id="F3Heart" name="heart" value="3"><br>
         <label for="F4">Function 4 Body:</label><br>
         <textarea id="F4" name="correct" placeholder="Enter correct function here" required></textarea><br>
-        <input type="submit" value="Submit">
+        <button type="button" onclick="runFunc()" id="execute">Generate JSON</button>
     </div>
 </body>
 
