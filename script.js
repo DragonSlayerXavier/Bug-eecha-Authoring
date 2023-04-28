@@ -1,46 +1,45 @@
 function generateTypeArray() {
     var array = [];
-    for (var i = 0; i < data.count; i++) {
-        array.push(data.in[i]);
+    for (var i = 0; i < parseInt(document.getElementById("count").value); i++) {
+        array.push(document.getElementsByName("in")[i].value);
     }
     return array;
 }
 
 function generateInputArray() {
     var array = [];
-    for (var i = 0; i < data.count; i++) {
-        array.push(data.var[i]);
+    for (var i = 0; i < parseInt(document.getElementById("count").value); i++) {
+        array.push(document.getElementsByName("var")[i].value);
     }
     return array;
 }
 
 function generateDescArray() {
     var array = [];
-    for (var i = 0; i < data.count; i++) {
-        array.push(data.in_desc[i]);
+    for (var i = 0; i < parseInt(document.getElementById("count").value); i++) {
+        array.push(document.getElementsByName("in_desc")[i].value);
     }
     return array;
 }
 
 function generateHeartArray() {
     var array = [];
-    if (data.heart == undefined) return array;
-    for (var i = 1; i <= 3; i++) {
-        array.push(data.heart.includes(i.toString()));
+    for (var i = 0; i < 3; i++) {
+        array.push(document.getElementsByName("heart")[i].checked);
     }
     return array;
 }
 
 function generateLabelArray() {
     var array = [];
-    for (var i = 0; i < data.count; i++) {
-        array.push(data.in_label[i]);
+    for (var i = 0; i < parseInt(document.getElementById("count").value); i++) {
+        array.push(document.getElementsByName("in_label")[i].value);
     }
     return array;
 }
 
 function customValidation() {
-    return data.customValidate == undefined ? false : true;
+    return document.getElementById("customValidate").checked;
 }
 
 function generateJSON() {
