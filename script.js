@@ -1,3 +1,7 @@
+/**
+ * A function that generates an array of input types from form data.
+ * @returns {Array} Array of input types
+ */
 function generateTypeArray() {
     var array = [];
     for (var i = 0; i < parseInt(document.getElementById("count").value); i++) {
@@ -6,6 +10,10 @@ function generateTypeArray() {
     return array;
 }
 
+/**
+ * A function that generates an array of input variable names from form data.
+ * @returns {Array} Array of input variable names
+ */
 function generateInputArray() {
     var array = [];
     for (var i = 0; i < parseInt(document.getElementById("count").value); i++) {
@@ -14,6 +22,10 @@ function generateInputArray() {
     return array;
 }
 
+/**
+ * A function that generates an array of input descriptions from form data.
+ * @returns {Array} Array of input descriptions
+ */
 function generateDescArray() {
     var array = [];
     for (var i = 0; i < parseInt(document.getElementById("count").value); i++) {
@@ -22,6 +34,10 @@ function generateDescArray() {
     return array;
 }
 
+/**
+ * A function that generates an array of booleans based on which functions reward hearts.
+ * @returns {Array} Array of booleans based on which functions reward hearts.
+ */
 function generateHeartArray() {
     var array = [];
     for (var i = 0; i < 3; i++) {
@@ -30,6 +46,10 @@ function generateHeartArray() {
     return array;
 }
 
+/**
+ * A function that generates an array of input labels from form data.
+ * @returns {Array} Array of input labels
+ */
 function generateLabelArray() {
     var array = [];
     for (var i = 0; i < parseInt(document.getElementById("count").value); i++) {
@@ -38,10 +58,18 @@ function generateLabelArray() {
     return array;
 }
 
+/**
+ * A function that returns whether or not the user wants to use custom validation.
+ * @returns {Boolean} Whether or not the user wants to use custom validation.
+ */
 function customValidation() {
     return document.getElementById("customValidate").checked;
 }
 
+/**
+ * A function that generates a JSON object from form data.
+ * @returns {JSON} The generated JSON object.
+ */
 function generateJSON() {
     var type_array = generateTypeArray();
     var inp_array = generateInputArray();
@@ -88,6 +116,9 @@ function generateJSON() {
     return json;
 }
 
+/**
+ * A function that runs the generateJSON function and displays the result.
+ */
 function runFunc() {
     var generated = generateJSON();
     document.getElementById("JSON").innerHTML = "The generated JSON: \n" + JSON.stringify(generated, null, 2);
