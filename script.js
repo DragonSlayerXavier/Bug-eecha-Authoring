@@ -87,7 +87,7 @@ function generateJSON() {
         "question": document.getElementById("question").value,
         "code": document.getElementById("code").value,
         "customValidate": customValidation(),
-        "customValidate": {
+        "valFunc": {
             "arguments": inp_array,
             "body": document.getElementById("valFunc").value
         },
