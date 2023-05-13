@@ -13,90 +13,14 @@
         <textarea id="question" name="question" placeholder="Enter the Question here" required></textarea><br>
         <label for="Algorithm">Algorithm:</label>
         <textarea id="code" name="code" placeholder="Enter the Correct Algorithm here" required></textarea><br>
-        <label for="count">Number of Input (1 - 5)</label>
-        <input type="number" id="count" name="count" min="1" max="5" required><br>
+        <label for="count">Number of Inputs</label>
+        <input type="number" id="count" name="count" value=0 readonly required><br>
+        <div>
+            <button type="button" onclick="addInput()">Add Input</button>
+        </div>
+        <div id="inputs"></div>
         <label for="futile">Max. Number of Futile Attempts (Set to zero for no limit)</label>
-        <input type="number" id="futile" name="futile" min="0" required><br>
-        <label for="in">Input 1 Type:</label>
-        <select id="in" name="in">
-            <option value="unselected">Select</option>
-            <option value="string">String</option>
-            <option value="number">Number</option>
-            <option value="num_array">Number Array</option>
-            <option value="sorted_num_array">Sorted Number Array</option>
-            <option value="str_array">String Array</option>
-        </select>
-        <label for="var">Variable Name:</label>
-        <input type="text" id="var" name="var" placeholder="Enter the variable name"><br>
-        <label for="in_desc">Input Description Placeholder:</label>
-        <input type="text" id="in_desc" name="in_desc"
-            placeholder="Enter the description placeholder for this input"><br>
-        <label for="in_label">Input Label:</label>
-        <input type="text" id="in_label" name="in_label" placeholder="Enter the label for this input"><br>
-        <label for="in">Input 2 Type:</label>
-        <select id="in" name="in">
-            <option value="unselected">Select</option>
-            <option value="string">String</option>
-            <option value="number">Number</option>
-            <option value="num_array">Number Array</option>
-            <option value="sorted_num_array">Sorted Number Array</option>
-            <option value="str_array">String Array</option>
-        </select>
-        <label for="var">Variable Name:</label>
-        <input type="text" id="var" name="var" placeholder="Enter the variable name"><br>
-        <label for="in_desc">Input Description Placeholder:</label>
-        <input type="text" id="in_desc" name="in_desc"
-            placeholder="Enter the description placeholder for this input"><br>
-        <label for="in_label">Input Label:</label>
-        <input type="text" id="in_label" name="in_label" placeholder="Enter the label for this input"><br>
-        <label for="in">Input 3 Type:</label>
-        <select id="in" name="in">
-            <option value="unselected">Select</option>
-            <option value="string">String</option>
-            <option value="number">Number</option>
-            <option value="num_array">Number Array</option>
-            <option value="sorted_num_array">Sorted Number Array</option>
-            <option value="str_array">String Array</option>
-        </select>
-        <label for="var">Variable Name:</label>
-        <input type="text" id="var" name="var" placeholder="Enter the variable name"><br>
-        <label for="in_desc">Input Description Placeholder:</label>
-        <input type="text" id="in_desc" name="in_desc"
-            placeholder="Enter the description placeholder for this input"><br>
-        <label for="in_label">Input Label:</label>
-        <input type="text" id="in_label" name="in_label" placeholder="Enter the label for this input"><br>
-        <label for="in">Input 4 Type:</label>
-        <select id="in" name="in">
-            <option value="unselected">Select</option>
-            <option value="string">String</option>
-            <option value="number">Number</option>
-            <option value="num_array">Number Array</option>
-            <option value="sorted_num_array">Sorted Number Array</option>
-            <option value="str_array">String Array</option>
-        </select>
-        <label for="var">Variable Name:</label>
-        <input type="text" id="var" name="var" placeholder="Enter the variable name"><br>
-        <label for="in_desc">Input Description Placeholder:</label>
-        <input type="text" id="in_desc" name="in_desc"
-            placeholder="Enter the description placeholder for this input"><br>
-        <label for="in_label">Input Label:</label>
-        <input type="text" id="in_label" name="in_label" placeholder="Enter the label for this input"><br>
-        <label for="in">Input 5 Type:</label>
-        <select id="in" name="in">
-            <option value="unselected">Select</option>
-            <option value="string">String</option>
-            <option value="number">Number</option>
-            <option value="num_array">Number Array</option>
-            <option value="sorted_num_array">Sorted Number Array</option>
-            <option value="str_array">String Array</option>
-        </select>
-        <label for="var">Variable Name:</label>
-        <input type="text" id="var" name="var" placeholder="Enter the variable name"><br>
-        <label for="in_desc">Input Description Placeholder:</label>
-        <input type="text" id="in_desc" name="in_desc"
-            placeholder="Enter the description placeholder for this input"><br>
-        <label for="in_label">Input Label:</label>
-        <input type="text" id="in_label" name="in_label" placeholder="Enter the label for this input"><br>
+        <input type="number" id="futile" name="futile" min="0" required><br> 
         <label for="out">Output Type:</label>
         <select id="out" name="out" required>
             <option value="string">String</option>
@@ -105,31 +29,25 @@
             <option value="sorted_num_array">Sorted Number Array</option>
             <option value="str_array">String Array</option>
         </select>
+        <label for="out_desc">Output Description Placeholder:</label>
+        <input type="text" id="out_desc" name="out_desc"
+            placeholder="Enter the description placeholder for the output"><br>
         <label for="customValidate">Custom Validation?</label>
         <input type="checkbox" id="customValidate" name="customValidate" value="0"><br>
         <label for="valFunc">Custom Validation Function:</label><br>
         <textarea id="valFunc" name="valFunc" placeholder="Enter custom validation function here"></textarea><br>
-        <label for="out_desc">Output Description Placeholder:</label>
-        <input type="text" id="out_desc" name="out_desc"
-            placeholder="Enter the description placeholder for the output"><br>
-        <label for="F1">Function 1 Body:</label><br>
-        <textarea id="F1" name="incorrect" placeholder="Enter incorrect function here" required></textarea><br>
-        <label for="F1Heart">Reward a heart?</label>
-        <input type="checkbox" id="F1Heart" name="heart" value="1"><br>
-        <label for="F2">Function 2 Body:</label><br>
-        <textarea id="F2" name="incorrect" placeholder="Enter incorrect function here" required></textarea><br>
-        <label for="F2Heart">Reward a heart?</label>
-        <input type="checkbox" id="F2Heart" name="heart" value="2"><br>
-        <label for="F3">Function 3 Body:</label><br>
-        <textarea id="F3" name="incorrect" placeholder="Enter incorrect function here" required></textarea><br>
-        <label for="F1Heart">Reward a heart?</label>
-        <input type="checkbox" id="F3Heart" name="heart" value="3"><br>
-        <label for="F4">Function 4 Body:</label><br>
-        <textarea id="F4" name="correct" placeholder="Enter correct function here" required></textarea><br>
+        <label for="F4">Correct Function:</label><br>
+        <textarea name="correct" placeholder="Enter correct function here" required></textarea><br>
+        <label for="numFunc">Number of Incorrect Functions</label>
+        <input type="number" id="numFunc" name="numFunc" value=0 readonly required><br>
+        <div>
+            <button type="button" onclick="addFunc()">Add Incorrect Function</button>
+        </div>
+        <div id="functions"></div>
         <button type="button" onclick="runFunc()" id="execute">Generate JSON</button>
     </div>
-    <div id = "JSON">
-        
+    <div id="JSON">
+
     </div>
 </body>
 

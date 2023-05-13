@@ -1,3 +1,34 @@
+function addInput() {
+    var count = parseInt(document.getElementById("count").value);
+    if (count < 100) {
+        count++;
+        document.getElementById("count").value = count;
+        var newDiv = document.createElement("div");
+        newDiv.innerHTML =
+            `<span>Input ${count}:</span>` +
+            "<select name=\"in\"> <option value=\"unselected\">Select Type</option> <option value=\"string\">String</option> <option value=\"number\">Number</option> <option value=\"num_array\">Number Array</option> <option value=\"sorted_num_array\">Sorted Number Array</option> <option value=\"str_array\">String Array</option> </select>" +
+            "<input type=\"text\" name=\"var\" placeholder=\"Variable Name\" required=\"required\"/>" +
+            "<input type=\"text\" name=\"in_desc\" placeholder=\"Description\" required=\"required\"/>" +
+            "<input type=\"text\" name=\"in_label\" placeholder=\"Label\" required=\"required\"/>";
+        document.getElementById("inputs").appendChild(newDiv);
+    }
+}
+
+function addFunc() {
+    var count = parseInt(document.getElementById("numFunc").value);
+    if (count < 100) {
+        count++;
+        document.getElementById("numFunc").value = count;
+        var newDiv = document.createElement("div");
+        newDiv.innerHTML =
+            `<span>Incorrect Function ${count}:</span>` +
+            `<textarea id="F${count}" name="incorrect" placeholder="Enter incorrect function here" required></textarea><br>` +
+            `<label for="F${count}Heart">Reward a heart?</label>` +
+            `<input type="checkbox" id="F${count}Heart" name="heart" value="${count}"><br></br>`
+        document.getElementById("functions").appendChild(newDiv);
+    }
+}
+
 /**
  * A function that generates an array of input types from form data.
  * @returns {Array} Array of input types
@@ -40,7 +71,7 @@ function generateDescArray() {
  */
 function generateHeartArray() {
     var array = [];
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < parseInt(document.getElementById("numFunc").value); i++) {
         array.push(document.getElementsByName("heart")[i].checked);
     }
     return array;
@@ -54,6 +85,18 @@ function generateLabelArray() {
     var array = [];
     for (var i = 0; i < parseInt(document.getElementById("count").value); i++) {
         array.push(document.getElementsByName("in_label")[i].value);
+    }
+    return array;
+}
+
+function generateIncorrectArray(hearts, input) {
+    var array = [];
+    for (var i = 0; i < parseInt(document.getElementById("numFunc").value); i++) {
+        array.push({
+            "heart": hearts[i],
+            "arguments": input,
+            "body": document.getElementsByName("incorrect")[i].value
+        })
     }
     return array;
 }
@@ -76,8 +119,10 @@ function generateJSON() {
     var desc_array = generateDescArray();
     var heart_array = generateHeartArray();
     var label_array = generateLabelArray();
+    var incorrect_array = generateIncorrectArray(heart_array, inp_array);
     var json = {
         "count": parseInt(document.getElementById("count").value),
+        "numFunc": parseInt(document.getElementById("numFunc").value),
         "futile": parseInt(document.getElementById("futile").value),
         "in": type_array,
         "in_desc": desc_array,
@@ -93,25 +138,9 @@ function generateJSON() {
         },
         "correct": {
             "arguments": inp_array,
-            "body": document.getElementById("F4").value
+            "body": document.getElementsByName("correct")[0].value
         },
-        "incorrect": [
-            {
-                "heart": heart_array[0],
-                "arguments": inp_array,
-                "body": document.getElementById("F1").value
-            },
-            {
-                "heart": heart_array[1],
-                "arguments": inp_array,
-                "body": document.getElementById("F2").value
-            },
-            {
-                "heart": heart_array[2],
-                "arguments": inp_array,
-                "body": document.getElementById("F3").value
-            }
-        ]
+        "incorrect": incorrect_array
     }
     return json;
 }
