@@ -11,12 +11,16 @@
     <div>
         <label for="Question">Question:</label><br>
         <textarea id="question" name="question" placeholder="Enter the Question here" required></textarea><br>
-        <label for="Algorithm">Algorithm:</label>
-        <textarea id="code" name="code" placeholder="Enter the Correct Algorithm here" required></textarea><br>
-        <label for="count">Number of Inputs</label>
+        <label for="Algorithm">Solution:</label>
+        <textarea id="code" name="code" placeholder="Enter the Solution here" required></textarea><br>
+        <label for="correct">Correct Function (in JS):</label>
+        <textarea name="correct" placeholder="Enter correct function here" required></textarea><br>
+        <!--Add a checkbox saying same as above
+        Remove label and description fields-->
+        <label for="count">Number of Arguments</label>
         <input type="number" id="count" name="count" value=0 readonly required><br>
         <div>
-            <button type="button" onclick="addInput()">Add Input</button>
+            <button type="button" onclick="addInput()">Add Argument</button>
         </div>
         <div id="inputs"></div>
         <label for="futile">Max. Number of Futile Attempts (Set to zero for no limit)</label>
@@ -36,8 +40,6 @@
         <input type="checkbox" id="customValidate" name="customValidate" value="0"><br>
         <label for="valFunc">Custom Validation Function:</label><br>
         <textarea id="valFunc" name="valFunc" placeholder="Enter custom validation function here"></textarea><br>
-        <label for="F4">Correct Function:</label><br>
-        <textarea name="correct" placeholder="Enter correct function here" required></textarea><br>
         <label for="numFunc">Number of Incorrect Functions</label>
         <input type="number" id="numFunc" name="numFunc" value=0 readonly required><br>
         <div>

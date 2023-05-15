@@ -5,9 +5,9 @@ function addInput() {
         document.getElementById("count").value = count;
         var newDiv = document.createElement("div");
         newDiv.innerHTML =
-            `<span>Input ${count}:</span>` +
+            `<span>Argument ${count}:</span>` +
             "<select name=\"in\"> <option value=\"unselected\">Select Type</option> <option value=\"string\">String</option> <option value=\"number\">Number</option> <option value=\"num_array\">Number Array</option> <option value=\"sorted_num_array\">Sorted Number Array</option> <option value=\"str_array\">String Array</option> </select>" +
-            "<input type=\"text\" name=\"var\" placeholder=\"Variable Name\" required=\"required\"/>" +
+            "<input type=\"text\" name=\"var\" placeholder=\"Argument Name\" required=\"required\"/>" +
             "<input type=\"text\" name=\"in_desc\" placeholder=\"Description\" required=\"required\"/>" +
             "<input type=\"text\" name=\"in_label\" placeholder=\"Label\" required=\"required\"/>";
         document.getElementById("inputs").appendChild(newDiv);
@@ -23,7 +23,7 @@ function addFunc() {
         newDiv.innerHTML =
             `<span>Incorrect Function ${count}:</span>` +
             `<textarea id="F${count}" name="incorrect" placeholder="Enter incorrect function here" required></textarea><br>` +
-            `<label for="F${count}Heart">Reward a heart?</label>` +
+            `<label for="F${count}Heart">Reward a life?</label>` +
             `<input type="checkbox" id="F${count}Heart" name="heart" value="${count}"><br></br>`
         document.getElementById("functions").appendChild(newDiv);
     }
