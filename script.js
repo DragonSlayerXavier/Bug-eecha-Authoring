@@ -93,6 +93,7 @@ function generateJSON() {
     var heart_array = generateHeartArray();
     var incorrect_array = generateIncorrectArray(heart_array, inp_array);
     var json = {
+        "name": document.getElementById("funName").value,
         "count": parseInt(document.getElementById("count").value),
         "numFunc": parseInt(document.getElementById("numFunc").value),
         "futile": parseInt(document.getElementById("futile").value),
