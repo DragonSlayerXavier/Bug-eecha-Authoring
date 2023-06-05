@@ -7,9 +7,7 @@ function addInput() {
         newDiv.innerHTML =
             `<span>Argument ${count}:</span>` +
             "<select name=\"in\"> <option value=\"unselected\">Select Type</option> <option value=\"string\">String</option> <option value=\"number\">Number</option> <option value=\"num_array\">Number Array</option> <option value=\"sorted_num_array\">Sorted Number Array</option> <option value=\"str_array\">String Array</option> </select>" +
-            "<input type=\"text\" name=\"var\" placeholder=\"Argument Name\" required=\"required\"/>" +
-            "<input type=\"text\" name=\"in_desc\" placeholder=\"Description\" required=\"required\"/>" +
-            "<input type=\"text\" name=\"in_label\" placeholder=\"Label\" required=\"required\"/>";
+            "<input type=\"text\" name=\"var\" placeholder=\"Argument Name\" required=\"required\"/>"
         document.getElementById("inputs").appendChild(newDiv);
     }
 }
@@ -54,18 +52,6 @@ function generateInputArray() {
 }
 
 /**
- * A function that generates an array of input descriptions from form data.
- * @returns {Array} Array of input descriptions
- */
-function generateDescArray() {
-    var array = [];
-    for (var i = 0; i < parseInt(document.getElementById("count").value); i++) {
-        array.push(document.getElementsByName("in_desc")[i].value);
-    }
-    return array;
-}
-
-/**
  * A function that generates an array of booleans based on which functions reward hearts.
  * @returns {Array} Array of booleans based on which functions reward hearts.
  */
@@ -73,18 +59,6 @@ function generateHeartArray() {
     var array = [];
     for (var i = 0; i < parseInt(document.getElementById("numFunc").value); i++) {
         array.push(document.getElementsByName("heart")[i].checked);
-    }
-    return array;
-}
-
-/**
- * A function that generates an array of input labels from form data.
- * @returns {Array} Array of input labels
- */
-function generateLabelArray() {
-    var array = [];
-    for (var i = 0; i < parseInt(document.getElementById("count").value); i++) {
-        array.push(document.getElementsByName("in_label")[i].value);
     }
     return array;
 }
@@ -116,19 +90,14 @@ function customValidation() {
 function generateJSON() {
     var type_array = generateTypeArray();
     var inp_array = generateInputArray();
-    var desc_array = generateDescArray();
     var heart_array = generateHeartArray();
-    var label_array = generateLabelArray();
     var incorrect_array = generateIncorrectArray(heart_array, inp_array);
     var json = {
         "count": parseInt(document.getElementById("count").value),
         "numFunc": parseInt(document.getElementById("numFunc").value),
         "futile": parseInt(document.getElementById("futile").value),
         "in": type_array,
-        "in_desc": desc_array,
-        "in_label": label_array,
         "out": document.getElementById("out").value,
-        "out_desc": document.getElementById("out_desc").value,
         "question": document.getElementById("question").value,
         "code": document.getElementById("code").value,
         "customValidate": customValidation(),
