@@ -1,3 +1,19 @@
+function showGuidelines() {
+    alert("Here are some guidelines to follow:\n\n" +
+         "1. The function name should be a single word.\n" +
+         "2. Please ensure that the function body for all executable functions only includes the function body. (i.e. no function signature)\n" +
+         "Please note that this includes the validation function, correct function, and all incorrect functions.\n" +
+         "3. Please make sure that the functions return values instead of printing them or using console.log.\n" +
+         "4. Please make sure that the function body is valid JavaScript code.\n" +
+         "5. For the display code (the Solution field), you may use whatever language you are using in your course.\n" +
+         "(You may use pseudocode. This code does not need to be executable)\n" +
+         "6. Please use line breaks to break lines in the display code. This will be translated to \\n in the JSON.\n" +
+         "(There is no need to do this manually)\n" +
+         "7. Please use \\t to denote a tab in the display code.\n" +
+         "One \\t denotes one level of indentation. Please use as many of them as needed before each line.\n"
+         );
+}
+
 function addInput() {
     var count = parseInt(document.getElementById("count").value);
     if (count < 100) {

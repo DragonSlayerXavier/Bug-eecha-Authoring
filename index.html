@@ -9,12 +9,15 @@
 
 <body>
     <div>
+        <button type="button" onclick="showGuidelines()">Show Guidelines</button>
+    </div>
+    <div>
         <label for="funName">Function Name</label><br>
         <input type="text" id="funName" name="funName" placeholder="Enter the function name" required><br>
         <label for="Question">Question:</label><br>
         <textarea id="question" name="question" placeholder="Enter the Question here" required></textarea><br>
         <label for="Algorithm">Solution:</label>
-        <textarea id="code" name="code" placeholder="Enter the Solution here" required></textarea><br>
+        <textarea id="code" name="code" placeholder="Enter the Solution here (This will be displayed)" required></textarea><br>
         <label for="correct">Correct Function (in JS):</label>
         <textarea name="correct" placeholder="Enter correct function here" required></textarea><br>
         <!--Add a checkbox saying same as above
