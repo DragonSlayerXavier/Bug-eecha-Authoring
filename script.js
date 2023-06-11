@@ -136,5 +136,5 @@ function generateJSON() {
  */
 function runFunc() {
     var generated = generateJSON();
-    document.getElementById("JSON").innerHTML = "The generated JSON: \n" + JSON.stringify(generated, null, 2);
+    document.getElementById("JSON").innerHTML = "The generated JSON: \n" + JSON.stringify(generated, null, 2).split('<').join('&lt;').split('>').join('&gt;');
 }
