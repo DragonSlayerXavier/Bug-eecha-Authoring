@@ -1,0 +1,69 @@
+{
+    "MAX_LIVES": "The total number of lives. Please keep this as a number with no quotes around it.",
+    "MAX_QUESTIONS": "The maximum number of questions to play the game with. Please keep this as a number with no quotes around it.",
+    "winMessage": "This text will be displayed when a round is won.",
+    "lossMessage": "This text will be displayed when the player runs out of lives.",
+    "database": [
+        {
+            "name": "The name of the function, displayed in the execution template.",
+            "count": "The number of arguments. Number with no quotes around it.",
+            "numFunc": "The number of incorrect functions. No quotes again.",
+            "futile": "The maximum number of futile attempts. Lives will be depleted if this is exceeded without finding a bug. Leave at 0 for no limit. No quotes.",
+            "in": [
+                "An",
+                "Array",
+                "Of",
+                "Input",
+                "Types"
+            ],
+            "out": "Type of Output",
+            "question": "The question text",
+            "code": "The correct code. This will be displayed. Please use \n for new lines and \t for one level of indentation.",
+            "customValidate": "Whether or not you want to use a custom validation function. If you do, set this to true. If not, set it to false. No quotes.",
+            "valFunc": {
+                "arguments": [
+                    "The",
+                    "Name",
+                    "Of",
+                    "The",
+                    "Arguments"
+                ],
+                "body": "The validator function body. Please do not include the function signature. Please ensure valid JS. Please return true or false from this based on whether the input is valid or not."
+            },
+            "correct": {
+                "arguments": [
+                    "The",
+                    "Name",
+                    "Of",
+                    "The",
+                    "Arguments"
+                ],
+                "body": "The correct function body. No function signature. Please ensure valid JS. Please return values from this function instead of displaying or printing them to the console."
+            },
+            "incorrect": [
+                {
+                    "heart": "Whether or not finding this bug will award a life. Please use true or false, no quotes.",
+                    "arguments": [
+                        "The",
+                        "Name",
+                        "Of",
+                        "The",
+                        "Arguments"
+                    ],
+                    "body": "Incorrect functions. You can have as many of these as you want. No function signature. Please ensure valid JS. Please return values from this function instead of displaying or printing them to the console."
+                },
+                {
+                    "heart": "Whether or not finding this bug will award a life. Please use true or false, no quotes.",
+                    "arguments": [
+                        "The",
+                        "Name",
+                        "Of",
+                        "The",
+                        "Arguments"
+                    ],
+                    "body": "Another incorrect function, just to demonstrate the array format."
+                }
+            ]
+        }
+    ]
+}

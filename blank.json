@@ -1,0 +1,7 @@
+{
+    "MAX_LIVES": "The total number of lives. Please keep this as a number with no quotes around it.",
+    "MAX_QUESTIONS": "The maximum number of questions to play the game with. Please keep this as a number with no quotes around it.",
+    "winMessage": "This text will be displayed when a round is won.",
+    "lossMessage": "This text will be displayed when the player runs out of lives.",
+    "database": ["Delete this text. Copy paste the generated JSON as elements into this array."]
+}
