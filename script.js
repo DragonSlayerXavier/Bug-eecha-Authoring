@@ -22,7 +22,7 @@ function addInput() {
         var newDiv = document.createElement("div");
         newDiv.innerHTML =
             `<span>Argument ${count}:</span>` +
-            "<select name=\"in\"> <option value=\"unselected\">Select Type</option> <option value=\"string\">String</option> <option value=\"number\">Number</option> <option value=\"num_array\">Number Array</option> <option value=\"sorted_num_array\">Sorted Number Array</option> <option value=\"str_array\">String Array</option> </select>" +
+            "<select name=\"in\"> <option value=\"unselected\">Select Type</option> <option value=\"string\">String</option> <option value=\"number\">Number</option> <option value=\"num_array\">Number Array</option> <option value=\"sorted_num_array\">Sorted Number Array</option> <option value=\"str_array\">String Array</option> <option value=\"boolean\">Boolean</option> </select>" +
             "<input type=\"text\" name=\"var\" placeholder=\"Argument Name\" required=\"required\"/>"
         document.getElementById("inputs").appendChild(newDiv);
     }
