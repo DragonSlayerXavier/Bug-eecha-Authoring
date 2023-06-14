@@ -28,6 +28,16 @@ function addInput() {
     }
 }
 
+function removeInput() {
+    var count = parseInt(document.getElementById("count").value);
+    if (count > 0) {
+        count--;
+        document.getElementById("count").value = count;
+        var inputs = document.getElementById("inputs");
+        inputs.removeChild(inputs.lastChild);
+    }
+}
+
 function addFunc() {
     var count = parseInt(document.getElementById("numFunc").value);
     if (count < 100) {
@@ -40,6 +50,16 @@ function addFunc() {
             `<label for="F${count}Heart">Reward a life?</label>` +
             `<input type="checkbox" id="F${count}Heart" name="heart" value="${count}"><br></br>`
         document.getElementById("functions").appendChild(newDiv);
+    }
+}
+
+function removeFunc() {
+    var count = parseInt(document.getElementById("numFunc").value);
+    if (count > 0) {
+        count--;
+        document.getElementById("numFunc").value = count;
+        var functions = document.getElementById("functions");
+        functions.removeChild(functions.lastChild);
     }
 }
 

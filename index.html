@@ -31,6 +31,7 @@
         <input type="number" id="count" name="count" value=0 readonly required><br>
         <div>
             <button type="button" onclick="addInput()">Add Argument</button>
+            <button type="button" onclick="removeInput()">Remove Argument</button>
         </div>
         <div id="inputs"></div>
         <label for="futile">Max. Number of Futile Attempts (Set to zero for no limit)</label>
@@ -52,6 +53,7 @@
         <input type="number" id="numFunc" name="numFunc" value=0 readonly required><br>
         <div>
             <button type="button" onclick="addFunc()">Add Incorrect Function</button>
+            <button type="button" onclick="removeFunc()">Remove Incorrect Function</button>
         </div>
         <div id="functions"></div>
         <button type="button" onclick="runFunc()" id="execute">Generate JSON</button>
