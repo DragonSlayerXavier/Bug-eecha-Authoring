@@ -10,7 +10,10 @@ function showGuidelines() {
          "6. Please use line breaks to break lines in the display code. This will be translated to \\n in the JSON.\n" +
          "(There is no need to do this manually)\n" +
          "7. Please use \\t to denote a tab in the display code.\n" +
-         "One \\t denotes one level of indentation. Please use as many of them as needed before each line.\n"
+         "One \\t denotes one level of indentation. Please use as many of them as needed before each line.\n" +
+         "8. The question text supports markdown. You can use bold, italic and links.\n" +
+         "Surround text in asterisks to make it *italic*, double asterisks to make it **bold** and square brackets to make it a [link text](link address).\n" +
+         "9. If you would like asterisks to show up, please put a backslash before them (\\*).\n"
          );
 }
 
@@ -135,7 +138,7 @@ function generateJSON() {
         "futile": parseInt(document.getElementById("futile").value),
         "in": type_array,
         "out": document.getElementById("out").value,
-        "question": document.getElementById("question").value,
+        "question": document.getElementById("question").value.split('\*').join('*').split("\\*").join('\*'),
         "code": document.getElementById("code").value,
         "customValidate": customValidation(),
         "valFunc": {
