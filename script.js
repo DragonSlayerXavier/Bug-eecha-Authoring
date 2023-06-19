@@ -138,7 +138,7 @@ function generateJSON() {
         "futile": parseInt(document.getElementById("futile").value),
         "in": type_array,
         "out": document.getElementById("out").value,
-        "question": document.getElementById("question").value.split('\*').join('*').split("\\*").join('\*'),
+        "question": document.getElementById("question").value.split('\*').join('*'),
         "code": document.getElementById("code").value,
         "customValidate": customValidation(),
         "valFunc": {
