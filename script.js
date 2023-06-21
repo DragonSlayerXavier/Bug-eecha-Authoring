@@ -11,9 +11,13 @@ function showGuidelines() {
          "(There is no need to do this manually)\n" +
          "7. Please use \\t to denote a tab in the display code.\n" +
          "One \\t denotes one level of indentation. Please use as many of them as needed before each line.\n" +
-         "8. The question text supports markdown. You can use bold, italic and links.\n" +
-         "Surround text in asterisks to make it *italic*, double asterisks to make it **bold** and square brackets to make it a [link text](link address).\n" +
-         "9. If you would like asterisks to show up, please put a backslash before them (\\*).\n"
+         "8. The question text supports markdown. You can use bold, italic, strikethrough, inline code and links.\n" +
+         "Surround text in asterisks to make it *italic*, double asterisks to make it **bold**, double tildes to make it ~~strikethrough~~, backticks to make it `inline code`,  and square brackets to make it a [link text](link address).\n" +
+         "9. If you would like asterisks to show up, please put a backslash before them (\\*).\n" +
+         "10. The markdown supports ordered and unordered lists.\n" +
+         "To make an ordered list, start each line with a number followed by a period. Please make sure that the first line of the list starts with a double space.\n" +
+         "To make an unordered list, start each line with a dash. Please make sure that the first line of the list starts with a double space.\n" +
+         ""
          );
 }
 
