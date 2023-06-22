@@ -15,8 +15,9 @@ function showGuidelines() {
          "Surround text in asterisks to make it *italic*, double asterisks to make it **bold**, double tildes to make it ~~strikethrough~~, backticks to make it `inline code`,  and square brackets to make it a [link text](link address).\n" +
          "9. If you would like asterisks to show up, please put a backslash before them (\\*).\n" +
          "10. The markdown supports ordered and unordered lists.\n" +
-         "To make an ordered list, start each line with a number followed by a period. Please make sure that the first line of the list starts with a double space.\n" +
-         "To make an unordered list, start each line with a dash. Please make sure that the first line of the list starts with a double space.\n" +
+         "To make an ordered list, start each line with a number followed by a period. Please make sure that the first line of the list starts with a double space and that the line preceding the list ends in a double space.\n" +
+         "To make an unordered list, start each line with a dash. Please make sure that the first line of the list starts with a double space and that the line preceding the list ends in a double space.\n" +
+         "Please note that ordered lists may only start from 1. in every instance.\n" +
          ""
          );
 }
