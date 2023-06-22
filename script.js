@@ -5,7 +5,8 @@ function showGuidelines() {
         "Please note that this includes the validation function, correct function, and all incorrect functions.\n" +
         "3. Please make sure that the functions return values instead of printing them or using console.log.\n" +
         "4. Please make sure that the function body is valid JavaScript code.\n" +
-        "5. For the display code (the Solution field), you may use whatever language you are using in your course.\n" +
+        "CONTINUED IN THE NEXT ALERT BOX")
+    alert("5. For the display code (the Solution field), you may use whatever language you are using in your course.\n" +
         "(You may use pseudocode. This code does not need to be executable)\n" +
         "6. Please use line breaks to break lines in the display code. This will be translated to \\n in the JSON.\n" +
         "(There is no need to do this manually)\n" +
