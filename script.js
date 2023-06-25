@@ -20,6 +20,7 @@ function showGuidelines() {
         "To make an ordered list, start each line with a number followed by a period. Please make sure that the first line of the list starts with a double space and that the line preceding the list ends in a double space.\n" +
         "To make an unordered list, start each line with a dash. Please make sure that the first line of the list starts with a double space and that the line preceding the list ends in a double space.\n" +
         "Please note that ordered lists may only start from 1. in every instance.\n" +
+        "11. Only the displayed code may be in a different language. All executable code must be in JavaScript.\n" +
         ""
     );
 }
@@ -147,6 +148,7 @@ function generateJSON() {
         "out": document.getElementById("out").value,
         "question": document.getElementById("question").value.split('\*').join('*'),
         "code": document.getElementById("code").value,
+        "language": document.getElementsByName("language")[0].value,
         "customValidate": customValidation(),
         "valFunc": {
             "arguments": inp_array,

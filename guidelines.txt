@@ -16,3 +16,4 @@
     To make an ordered list, start each line with a number followed by a period. Please make sure that the first line of the list starts with a double space and that the line preceding the list ends in a double space. 
     To make an unordered list, start each line with a dash. Please make sure that the first line of the list starts with a double space and that the line preceding the list ends in a double space. 
     Please note that ordered lists may only start from 1. in every instance. 
+11. Only the displayed code may be in a different language. All executable code must be in JavaScript.

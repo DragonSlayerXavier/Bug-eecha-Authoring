@@ -19,6 +19,7 @@
             "out": "Type of Output",
             "question": "The question text",
             "code": "The correct code. This will be displayed. Please use \n for new lines and \t for one level of indentation.",
+            "language": "The language the displayed code is in. This will be used for syntax highlighting. Please use the language name as specified by prism.js.",
             "customValidate": "Whether or not you want to use a custom validation function. If you do, set this to true. If not, set it to false. No quotes.",
             "valFunc": {
                 "arguments": [
