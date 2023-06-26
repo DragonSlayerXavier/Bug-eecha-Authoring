@@ -148,7 +148,7 @@ function generateJSON() {
         "out": document.getElementById("out").value,
         "question": document.getElementById("question").value.split('\*').join('*'),
         "code": document.getElementById("code").value,
-        "language": document.getElementsByName("language")[0].value,
+        "language": document.getElementsByName("lang")[0].value,
         "customValidate": customValidation(),
         "valFunc": {
             "arguments": inp_array,
