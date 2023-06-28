@@ -57,7 +57,7 @@ function addFunc() {
         var newDiv = document.createElement("div");
         newDiv.innerHTML =
             `<span>Incorrect Function ${count}:</span>` +
-            `<textarea id="F${count}" name="incorrect" placeholder="Enter incorrect function here" required></textarea><br>` +
+            `<textarea id="F${count}" name="incorrect" placeholder="Enter the body of the incorrect function here" required></textarea><br>` +
             `<label for="F${count}Heart">Reward a life?</label>` +
             `<input type="checkbox" id="F${count}Heart" name="heart" value="${count}"><br></br>`
         document.getElementById("functions").appendChild(newDiv);
